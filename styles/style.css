@@ -2,7 +2,7 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  font-family: var(--font-family-default), sans-serif;
+  font-family: var(--font-family-default), monospace;
   font-size: var(--font-size-default);
   line-height: var(--line-height-default);
   background-color: var(--background-color);
@@ -13,6 +13,7 @@
 }
 
 .header {
+  position: relative;
   display: grid;
   justify-items: end;
   padding-inline-start: var(--padding-mobile);
@@ -36,9 +37,8 @@
   block-size: 25px;
   border-block-start: 1px solid var(--button-color);
   border-inline-end: 1px solid var(--button-color);
-  justify-self: end;
-  align-self: start;
-  margin: var(--padding-mobile);
+  inset-block-start: 0;
+  inset-inline-end: 0;
 }
 
 .decorated-zone::after {
@@ -49,18 +49,19 @@
   block-size: 25px;
   border-block-end: 1px solid var(--button-color);
   border-inline-start: 1px solid var(--button-color);
-  justify-self: start;
-  align-self: end;
-  margin: var(--padding-mobile);
+  inset-block-end: 0;
+  inset-inline-start: 0;
 }
 
 .header__rec-sign {
   position: absolute;
   display: flex;
   align-items: center;
+  text-transform: uppercase;
   gap: 10px;
   padding-inline-end: 9px;
-  margin: var(--padding-mobile);
+  inset-block-start: var(--padding-mobile);
+  inset-inline-end: var(--padding-mobile);
 }
 
 .header__rec-sign:before {
@@ -98,7 +99,9 @@
   border: 1px solid transparent;
   padding-inline-start: 13px;
   padding-inline-end: 13px;
-  block-size: 26px;
+  padding-block-start: 1px;
+  padding-block-end: 1px;
+  min-block-size: 26px;
   cursor: pointer;
 }
 
@@ -136,10 +139,6 @@
   color: var(--title-decor-color);
   font-size: inherit;
   font-weight: bold;
-}
-
-.title__text + .article__sub-header-text {
-  margin-block-start: 10px;
 }
 
 .main-content {
@@ -253,10 +252,6 @@
     margin: var(--padding-tablet-desktop);
   }
 
-  .header__rec-sign {
-    margin: var(--padding-tablet-desktop);
-  }
-
   .header__title {
     justify-self: start;
     margin-inline-start: var(--margin-tablet-desktop-negative);
@@ -269,6 +264,11 @@
     width: 50%;
   }
 
+  .header__rec-sign {
+    inset-block-start: var(--padding-tablet-desktop);
+    inset-inline-end: var(--padding-tablet-desktop);
+  }
+
   .main-content {
     padding-block-start: 60px;
     padding-block-end: 60px;
@@ -276,8 +276,8 @@
     padding-inline-end: var(--padding-tablet-desktop);
   }
 
-  .section-two-columns {
-    grid-template-columns: 1fr 2fr;
+  .section-columns {
+    grid-template-columns: 32% 68%;
   }
 
   .section__header-narrow {
@@ -312,6 +312,10 @@
   .image-tape {
     grid-column: 1 / 2;
     grid-row: 2 / 4;
+    block-size: 100%;
+  }
+
+  .image-books {
     block-size: 100%;
   }
 
@@ -376,15 +380,15 @@
     padding-inline-end: var(--padding-tablet-desktop);
   }
 
-  .section-two-columns {
-    grid-template-columns: 1fr 2fr;
+  .section-columns {
+    grid-template-columns: 1fr 2.05fr;
   }
 
   .section__header-narrow {
     inline-size: 30vw;
   }
 
-  .section__content-three-columns {
+  .section__content-columns {
     grid-template-columns: repeat(3, 1fr);
   }
 
@@ -416,6 +420,10 @@
   .image-tape {
     grid-column: 1 / 2;
     grid-row: 2 / 4;
+    block-size: 100%;
+  }
+
+  .image-books {
     block-size: 100%;
   }
 

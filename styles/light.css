@@ -14,15 +14,11 @@
   --background-image: url("../images/cover-image-light.png");
 }
 
-.theme_light .header__rec-sign:before {
+.theme_light .header__rec-sign {
   display: none;
 }
 
-.theme_light .header__rec-sign:after {
-  display: none;
-}
-
-.theme_light .article__section-header {
+.theme_light .section__header {
   color: var(--main-text-color);
 }
 
@@ -45,18 +41,14 @@
   --background-image: url("../images/cover-image-light.png");
     }
 
-    .header__rec-sign:before {
+    .header__rec-sign {
       display: none;
     }
     
-    .header__rec-sign:after {
-      display: none;
-    }
-    
-    .article__section-header {
+    .section__header {
       color: var(--main-text-color);
     }
-
+    
     .footer__text {
       color: var(--second-accent-color);
       text-shadow: 2px 2px 0 var(--accent-color);
