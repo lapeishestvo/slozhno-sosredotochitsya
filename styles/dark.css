@@ -14,10 +14,10 @@
   --background-image: url("../images/cover-image-dark.png");
 }
 
-.theme_dark .header__rec-sign:before {
-  display: inline;
+.theme_dark .header__rec-sign {
+  display: flex;
 }
 
-.theme_dark .header__rec-sign:after {
-  display: inline;
+.theme_dark .section__header {
+  color: var(--accent-color);
 }

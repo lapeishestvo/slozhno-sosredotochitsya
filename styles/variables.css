@@ -13,7 +13,8 @@
   --font-family-default: "IBM Plex mono";
   --font-size-default: 18px;
   --line-height-default: 1.3em;
-  --large-text-size-mobile: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  --large-text-size-tablet-desktop: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  --large-text-size-mobile: 116px;
+  --large-text-size-tablet: 120px;
+  --large-text-size-desktop: 157px;
   --background-image: url("../images/cover-image-dark.png");
 }
