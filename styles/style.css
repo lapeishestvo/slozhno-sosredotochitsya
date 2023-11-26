@@ -37,8 +37,8 @@
   block-size: 25px;
   border-block-start: 1px solid var(--button-color);
   border-inline-end: 1px solid var(--button-color);
-  inset-block-start: 0;
-  inset-inline-end: 0;
+  inset-block-start: var(--padding-mobile);
+  inset-inline-end: var(--padding-mobile);
 }
 
 .decorated-zone::after {
@@ -49,8 +49,8 @@
   block-size: 25px;
   border-block-end: 1px solid var(--button-color);
   border-inline-start: 1px solid var(--button-color);
-  inset-block-end: 0;
-  inset-inline-start: 0;
+  inset-block-end: var(--padding-mobile);
+  inset-inline-start: var(--padding-mobile);
 }
 
 .header__rec-sign {
@@ -246,11 +246,13 @@
   }
 
   .decorated-zone::before {
-    margin: var(--padding-tablet-desktop);
+    inset-block-start: var(--padding-tablet-desktop);
+    inset-inline-end: var(--padding-tablet-desktop);
   }
 
   .decorated-zone::after {
-    margin: var(--padding-tablet-desktop);
+    inset-block-end: var(--padding-tablet-desktop);
+    inset-inline-start: var(--padding-tablet-desktop);
   }
 
   .header__title {
@@ -346,11 +348,13 @@
   }
 
   .decorated-zone::before {
-    margin: var(--padding-tablet-desktop);
+    inset-block-start: var(--padding-tablet-desktop);
+    inset-inline-end: var(--padding-tablet-desktop);
   }
 
   .decorated-zone::after {
-    margin: var(--padding-tablet-desktop);
+    inset-block-end: var(--padding-tablet-desktop);
+    inset-inline-start: var(--padding-tablet-desktop);
   }
 
   .header__title {
